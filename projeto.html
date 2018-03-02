@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<title>projeto</title>
+	
+	<style type="text/css">
+	#canvas{
+		background-color: grey;
+	}
+	</style>
 
 </head>
+
+
 <body>
 
-	<h1>nada vê</h1>
+	<canvas id="canvas" width="300" height="300">
+		Seu navagador não suporta esse recurso...
 
-	<div class="">
-		
-	</div>
+	</canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var contexto = canvas.getContext('2d');
+
+		contexto.fillStyle = "red";
+		contexto.fillRect(10,10,100,150);
+
+		contexto.lineWidth = 3;
+		contexto.strokeRect(10,10,100,150);
+	</script>
 
 </body>
+
+
 </html>
