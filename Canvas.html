@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>canvas</title>
+	
+	<style type="text/css">
+	#canvas{
+		background-color: grey;
+	}
+	</style>
+
+</head>
+
+
+<body>
+
+	<canvas id="canvas" width="300" height="300">
+		Seu navagador não suporta esse recurso...
+
+	</canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var contexto = canvas.getContext('2d');
+
+		contexto.beginPath();
+		contexto.moveTo(20,200);
+		contexto.lineTo(20,100);
+		contexto.lineTo(80,150);
+		contexto.lineTo(19,198);
+		contexto.strokeStyle = "orange";
+		contexto.lineWidth = 8;
+		contexto.stroke();
+		contexto.fillStyle = "#539";
+		contexto.fill();
+	</script>
+
+</body>
+
+
+</html>
