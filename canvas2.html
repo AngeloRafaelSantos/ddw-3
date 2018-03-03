@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>canvas</title>
+	
+	<style type="text/css">
+	#canvas{
+		background-color: grey;
+	}
+	</style>
+
+</head>
+
+
+<body>
+
+	<canvas id="canvas" width="300" height="300">
+		Seu navagador não suporta esse recurso...
+
+	</canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var contexto = canvas.getContext('2d');
+
+		contexto.beginPath();
+		contexto.arc(
+			50, //x
+			50, //y
+			40, //raio
+			0*Math.PI/180, //ponto inicial
+			360*Math.PI/180, //ponto final
+			true //sentido true = horario, false = anti-horario
+			);
+		contexto.lineWidth = 8;
+		contexto.stroke();
+		contexto.fillStyle = "#f70";
+		contexto.fill();
+	</script>
+
+</body>
+
+
+</html>
